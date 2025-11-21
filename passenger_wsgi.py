@@ -1,17 +1,12 @@
-import sys
 import os
+import sys
 
-# 1️⃣ Add your project folder to the Python path
-sys.path.insert(0, '/home/justuski/repositories/postgres-test-app')
 
-# 2️⃣ Set Django settings module
-os.environ['DJANGO_SETTINGS_MODULE'] = 'postgres_test_project.settings'
+project_home = '/home/justuski/repositories/postgres-test-app'
+if project_home not in sys.path:
+    sys.path.insert(0, project_home)
 
-# 3️⃣ Activate your virtual environment
-activate_env = '/home/justuski/virtualenv/repositories/postgres-test-app/3.10/bin/activate_this.py'
-with open(activate_env) as file_:
-    exec(file_.read(), dict(__file__=activate_env))
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'postgres_test_project.settings')
 
-# 4️⃣ Get Django WSGI application
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
