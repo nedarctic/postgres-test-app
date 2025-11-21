@@ -25,7 +25,7 @@ load_dotenv(BASE_DIR / ".env")
 SECRET_KEY = 'django-insecure-jdo7zrd3o1^z0304obld&mivjt_w+k8b6i(4c95#t80bjel8th'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -129,3 +129,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ALLOWED_HOSTS = ['postgres-test-app.justuskimtai.com']
