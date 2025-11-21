@@ -2,7 +2,7 @@ import os
 import sys
 
 
-project_home = '/home/justuski/repositories/postgres-test-app'
+project_home = '/home/justuski/postgres-test-app.justuskimtai.com'
 if project_home not in sys.path:
     sys.path.insert(0, project_home)
 
